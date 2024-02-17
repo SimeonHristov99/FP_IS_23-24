@@ -38,6 +38,7 @@ Define the following functions:
 4. `minGuard` uses guards.
 5. `minBuiltIn` uses built-in functions.
 6. `roundTwoDigButWithMagic` is defined on a functional level using partial function application.
+7. Explain why brackets are not needed when using prefix functions.
 
 **Test cases:**
 
@@ -81,6 +82,7 @@ Define two functions `factRec` and `factIter` that return the factorial of a `no
 2. Parameter validation is performed.
 3. `factRec` creates a linearly recursive process.
 4. `factIter` creates a linearly iterative process.
+5. Explain pattern matching.
 
 **Test cases:**
 
@@ -103,6 +105,8 @@ Define two functions `fibRec` and `fibIter` that return the number at the `i`<su
 2. Parameter validation is performed.
 3. `fibRec` creates a linearly recursive process.
 4. `fibIter` creates a linearly iterative process.
+5. Explain the wildcard symbol (`_`).
+6. Explain pattern matching.
 
 **Test cases:**
 
