@@ -2,10 +2,10 @@
 # Week_01 - Numbers. Recursion (part 1)
 ###################################################################################################
 
-[ ] Make a chat in Facebook with the name FP_IS_22-23.
-[ ] Introduce GitHub repository.
-[ ] File > Autosave.
-[ ] Introduce ForHome at the start of the second hour. Please remind Simo to do this, because he'll forget.
+[X] Make a chat in Facebook with the name FP_IS_22-23.
+[X] Introduce GitHub repository.
+[X] File > Autosave.
+[X] Introduce ForHome at the start of the second hour. Please remind Simo to do this, because he'll forget.
    - will add Mihi to our email thread when giving feedback for week 1;
       - ❗SEND EMAIL WITH "Reply ALL" option❗
 
@@ -55,8 +55,8 @@ Built-in Functions
         - use only "/" (equivalent to "/" in C++, but here it cannot be used for whole numbers)
  
  - power:
-    - use n ^ m  when m is a natural number (i.e. m > 0) (ex. 2 ^ 3 == 8)
-    - use n ** m when m is a floating-point number (ex. 2 ** 0.5 == 1.4142135623730951)
+    - use n^m  when m is a natural number (i.e. m > 0) (ex. 2^3 == 8)
+    - use n**m when m is a floating-point number (ex. 2**0.5 == 1.4142135623730951)
  
  - other: min, max, odd, even, gcd, abs, sqrt (sqrt 2 == 1.4142135623730951; sqrt :: Double -> Double)
 
@@ -84,7 +84,7 @@ Built-in Functions
 
 
 What is a predicate?
-   ???
+   Any function that returns True or False (a boolean type).
 
 
 Conditions:
