@@ -224,7 +224,7 @@ Watch [this](https://www.youtube.com/watch?v=HlgG395PQWw) YouTube video and answ
 
 **Description:**
 
-Define two predicates - `isEvenIf` and `isEvenGuards`, that check whether a whole number is even.
+Define two functions - `isEvenIf` and `isEvenGuards`, that check whether a whole number is even.
 
 **Acceptance criteria:**
 
