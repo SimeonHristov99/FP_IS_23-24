@@ -115,3 +115,33 @@ Code quality advice:
    3. Prefer pattern matching over guards.
    4. Do not use 'a', 'b', 'c' for naming parameters as these letters are used for defining polymorphic functions.
    5. Always reuse built-in functions. Do not implement them by yourselves unless explicitly specified in the task.
+
+
+###################################################################################################
+# Week_02 - Recursion (part 2)
+###################################################################################################
+
+Please no rar archives. Only zip archives.
+
+
+FOR HOME:
+   WARNING:
+      Getting a "Yes" does not mean getting a bonus!
+
+
+What is a declaration and what is a definition?
+   int add(const int x, const int y)       <-- ???
+   {                                       <-- ???
+      return x + y;                        <-- ???
+   }                                       <-- ???
+
+
+Closure
+   When a function returns a lambda function, we call that lambda function a closure.
+
+
+Type Inference - The Declaration Can Be Skipped
+   The analog of "auto" in C++.
+   The The Glasgow Haskell Compiler (GHC) can "guess" (more technically "infer") the types of every function
+     - this ability is called type inference
+   fname :: [type1 -> type2 -> ... ->]returnType     <= This is not needed
