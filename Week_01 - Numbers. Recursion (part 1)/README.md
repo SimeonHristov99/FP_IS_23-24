@@ -383,7 +383,7 @@ print $ isLeapYearGuards 2100 == False
 
 **Description:**
 
-John has a backpack. With it he can carry `k` kilograms. An item from the supermarket weighs `w` kilograms. Define a predicate that accepts three numbers - `c` (number of products), `k` and `w` and returns whether John is capable of buying all the products in one trip to the supermarket.
+John has a backpack. With it he can carry `k` kilograms. An item from the supermarket weighs `w` kilograms. Define a function that accepts three numbers - `c` (number of products), `k` and `w` and returns whether John is capable of buying all the products in one trip to the supermarket.
 
 **Acceptance criteria:**
 
