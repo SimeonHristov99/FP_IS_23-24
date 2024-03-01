@@ -2,7 +2,8 @@
 Define the following functions:
 
 - `areNotEqualOneLine`, `areNotEqualGuards`:
-    return whether two floating point numbers are different from each other;
+    return whether two floating point numbers
+    are different from each other;
 - `inside`:
     returns whether a whole number `x` is between
     two whole numbers - `start` and `finish`.
@@ -30,4 +31,13 @@ main = do
     print $ inside 10 50 20 == True
     print $ inside 10 50 1 == False
 
+inside :: Int -> Int -> Int -> Bool
+inside start finish x = min start finish <= x && x <= max start finish
 
+areNotEqualGuards :: Int -> Int -> Bool
+areNotEqualGuards x y
+ | x == y = False
+ | otherwise = True
+
+areNotEqualOneLine :: Int -> Int -> Bool
+areNotEqualOneLine x y = x /= y

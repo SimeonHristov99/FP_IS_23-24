@@ -1,7 +1,8 @@
 {-
 A prime number is a natural number greater than `1` that is
 not a product of two smaller natural numbers.
-Define a predicate that checks whether a number is a prime number.
+Define a predicate that checks whether
+a number is a prime number.
 
 **Acceptance criteria:**
 
@@ -16,4 +17,10 @@ main = do
     print $ isPrime 6 == False
     print $ isPrime 61 == True
 
-
+isPrime :: Int -> Bool
+isPrime n = n > 1 && helper 2
+ where
+    helper divisor
+     | divisor >= n = True
+     | mod n divisor == 0 = False
+     | otherwise = helper $ divisor + 1

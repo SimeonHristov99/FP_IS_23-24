@@ -130,14 +130,15 @@ FOR HOME:
 
 
 What is a declaration and what is a definition?
-   int add(const int x, const int y)       <-- ???
-   {                                       <-- ???
-      return x + y;                        <-- ???
-   }                                       <-- ???
+   int add(const int x, const int y)       <-- declaration
+   {                                       <-- definition
+      return x + y;                        <-- definition
+   }                                       <-- definition
 
 
 Closure
-   When a function returns a lambda function, we call that lambda function a closure.
+   When a function returns a lambda function,
+   we call that lambda function a closure.
 
 
 Type Inference - The Declaration Can Be Skipped
