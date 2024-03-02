@@ -102,8 +102,8 @@ Types of Evaluation Processes
       2. The recursive call is part of an expression.
 
    Linearly Iterative:
-      1. The result is stored as a variable that is set by ANOTHER function.
-      Often the variable is named "result" and the function - "helper".
+      1. The result is stored as a parameter that is set by ANOTHER function.
+      Often the parameter is named "result" and the function - "helper".
       
       2. The recursive call is not part of an expression.
       These processes are faster than the linearly recursive ones!
