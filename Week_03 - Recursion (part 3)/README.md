@@ -11,11 +11,13 @@ A narcissistic number is a number which is the sum of its own digits, each raise
 
 **Test cases:**
 
+```haskell
 print $ isNarcissistic 7 == True
 print $ isNarcissistic 12 == False
 print $ isNarcissistic 370 == True
 print $ isNarcissistic 371 == True
 print $ isNarcissistic 1634 == True
+```
 
 Take 153 (3 digits):
 
