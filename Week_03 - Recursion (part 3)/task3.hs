@@ -1,5 +1,6 @@
 {-
-Write a function that finds the maximum digit in a number.
+Write a function that finds
+the maximum digit in a number.
 
 **Acceptance criteria:**
 
@@ -14,3 +15,17 @@ main = do
     print $ findMax 9521 == 9
 
 
+
+findMax :: Int -> Int
+findMax n = helperPM n 0 
+ where
+    helperPM :: Int -> Int -> Int
+    helperPM 0 currentMax = currentMax
+    helperPM leftover currentMax =
+        helperPM (div leftover 10)
+            (max (mod leftover 10) currentMax)
+
+    helperGuards :: Int -> Int -> Int
+    helperGuards leftover currentMax 
+     | leftover < 10 = max leftover currentMax
+     | otherwise = helperGuards (div leftover 10) (max (mod leftover 10) currentMax)

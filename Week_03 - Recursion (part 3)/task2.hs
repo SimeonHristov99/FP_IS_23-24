@@ -1,5 +1,6 @@
 {-
-Define a function that accepts two whole numbers `x` and `n`
+Define a function that accepts two whole
+numbers `x` and `n`
 and calculates the following sum:
 
 1 + x + x^2 + x^3 + ... + x^n
@@ -18,4 +19,9 @@ main = do
     print $ calculateSum 1 11 == 12
     print $ calculateSum 2 11 == 4095
 
-
+calculateSum :: Int -> Int -> Int
+calculateSum x n = helper n 0
+ where
+    helper :: Int -> Int -> Int
+    helper 0 result = result + 1
+    helper leftoverPower result = helper (leftoverPower - 1) (result + x^leftoverPower)

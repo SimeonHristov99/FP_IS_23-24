@@ -1,5 +1,6 @@
 {-
-A digital root is the recursive sum of all the digits in a number.
+A digital root is the recursive sum
+of all the digits in a number.
 Given `n`, take the sum of the digits of `n`.
 If that value has more than one digit,
 continue reducing in this way until a single-digit number is produced.
@@ -24,4 +25,12 @@ main = do
     print $ digitalRoot 132189 == 6
     print $ digitalRoot 493193 == 2
 
+sumDigits :: Int -> Int
+sumDigits n
+ | n < 10 = n
+ | otherwise = mod n 10 + sumDigits (div n 10)
 
+digitalRoot :: Int -> Int
+digitalRoot n
+ | n < 10 = n
+ | otherwise = digitalRoot $ sumDigits n
