@@ -347,6 +347,9 @@ print $ removeD 6 656 == 5
 print $ removeD 0 606 == 66
 print $ removeD 0 600 == 6
 print $ removeD 6 600 == 0
+print $ removeD 2 120 == 10
+print $ removeD 2 12020 == 100
+print $ removeD 2 120250 == 1050
 print $ removeD 2 1234 == 134
 ```
 
