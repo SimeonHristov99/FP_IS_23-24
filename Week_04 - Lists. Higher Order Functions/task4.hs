@@ -1,3 +1,12 @@
+{-
+Write a predicate that checks whether a number `n` is between two numbers - `x` and `y`.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. The task is solved on a single line.
+-}
+
 main :: IO()
 main = do
     print $ isInside 1 5 4 == True -- x = 1, y = 5, n = 4

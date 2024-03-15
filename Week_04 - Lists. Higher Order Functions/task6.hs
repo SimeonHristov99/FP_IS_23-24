@@ -1,3 +1,13 @@
+{-
+Write a function that removes every element equal to `x` in a list.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. `removeAllRec` is defined using recursion.
+3. `removeAllHOF` is defined using higher order functions.
+-}
+
 main :: IO()
 main = do
     print $ removeAllRec 5 [5] == []

@@ -1,3 +1,13 @@
+{-
+Write a function increments all the values in a list by a given number.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. `incrementByLC` is defined using list comprehension.
+3. `incrementByHOF` is defined using higher order functions.
+-}
+
 main :: IO()
 main = do
     print $ incrementByLC 5 [5] == [10]
