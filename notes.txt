@@ -215,7 +215,7 @@ Useful built-in functions
 
  - combine the elements of lists
     - [1, 2, 3] ++ [4, 5, 6]     => [1, 2, 3, 4, 5, 6]
-    - concat [1, 2, 3] [4, 5, 6] => [1, 2, 3, 4, 5, 6]
+    - concat [[1, 2, 3], [4, 5, 6]] => [1, 2, 3, 4, 5, 6]
 
  - length [1, 2, 3]                       => 3
  - reverse [1, 2, 3]                      => [3, 2, 1]
@@ -243,7 +243,8 @@ Useful functions in the module Data.List
       replicate 5 10 -> [10,10,10,10,10]
 
 
-String - a list of characters. Functions are part of the module Data.Char
+String - a list of characters.
+Functions are part of the module Data.Char
  - type String = [Char]
  - Convert a number to a string
       show 15 == "15" == ['1', '5']
@@ -263,7 +264,8 @@ List Comprehension - Another Way Of Constructing a List
 
 Higher order functions:
    Definition:
-      A function that accepts at least one function as a parameter and/or returns a function.
+      A function that accepts at least one
+      function as a parameter and/or returns a function.
 
 
 Lambda function:

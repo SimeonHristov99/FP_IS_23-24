@@ -22,4 +22,13 @@ main = do
     print $ removeAllHOF 5 [5, 1, 5, 3, 5] == [1, 3]
     print $ removeAllHOF 3 [5, 1, 5, 3, 5] == [5, 1, 5, 5]
 
+removeAllHOF :: Int -> [Int] -> [Int]
+removeAllHOF n = filter (/= n)
+-- removeAllHOF n xs = filter (\ x -> x /= n) xs
+-- removeAllHOF n xs = filter (\ x -> not $ x == n) xs
 
+removeAllRec :: Int -> [Int] -> [Int]
+removeAllRec _ [] = []
+removeAllRec n (x:xs)
+ | n == x = removeAllRec n xs
+ | otherwise = x : removeAllRec n xs

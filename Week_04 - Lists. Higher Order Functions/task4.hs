@@ -14,4 +14,5 @@ main = do
     print $ isInside 10 50 20 == True
     print $ isInside 10 50 1 == False
 
-
+isInside :: Int -> Int -> Int -> Bool
+isInside x y n = elem n [min x y .. max x y]
