@@ -173,7 +173,7 @@ print $ incrementByHOF 3 [5, 1, 5, 3, 5] == [8, 4, 8, 6, 8]
 
 **Description:**
 
-Define funcions that:
+Define functions that:
 
 - Reverse a number;
 - Calculate the factorial of a number;
