@@ -278,3 +278,90 @@ Lambda function:
  - any    (\ x -> odd x)          [2, 4, 6]    => False
  - any    (\ x -> mod x 10 == 0)  [20, 44, 61] => True
 
+
+###################################################################################################
+# Week_05 - Lambda Expressions. Tuples
+###################################################################################################
+
+Lambda Expressions
+   - functions without a name (anonymous)
+      - have to be called or passed as an argument immediately
+      - called "arrow functions" in JS, TS, Frontend Frameworks
+      - in Python: lambda x: x + 1
+      - in C++: https://www.youtube.com/watch?v=mWgmBBz0y8c
+      - Why use lambda functions? https://stackoverflow.com/questions/3259322/why-use-lambda-functionscha
+      - ChatGPT:
+            Lambda functions, also known as anonymous functions, are a type of function in programming that can be defined without a name and can be used in place of a named function in many situations. Here are some reasons why you might want to use lambda functions:
+
+            1. Conciseness: Lambda functions are a way to write short, concise pieces of code that can be easily understood.
+            2. Flexibility: Lambda functions are very flexible and can be used in a variety of different situations, such as sorting and filtering data.
+            3. Function passing: Lambda functions can be passed as arguments to other functions, making it easier to write higher-order functions.
+            4. Improved performance: Using lambda functions can improve performance in certain situations, such as when working with large datasets or when using functional programming techniques.
+            5. Readability: Lambda functions can make code more readable by reducing the number of named functions needed and allowing for more inline code.
+
+            Overall, lambda functions are a powerful tool that can make code more efficient, flexible, and readable.
+
+   - have three parts: brackets, "the slash" \, "the arrow" ->
+      - (\ <parameters> -> <function application>)
+
+   - a lambda that adds 5 to a number:
+   ???
+
+   - a lambda-predicate that checks whether a number is greater than 10:
+   ???
+
+   - a lambda which adds three numbers:
+   ???
+
+   - What is an unary function?
+      ???
+   - What is a binary function?
+      ???
+   - Can you give examples?
+      unary : ???
+      binary: ???
+   
+   - Remember: The evaluation happens from LEFT TO RIGHT.
+
+Function Composition
+   Composition of f and g over x:
+      f $ g x
+      which is the same as
+      f (g x)
+      which is the same as
+      (f . g) x
+
+Tuples (Vectors) (Ordered pairs)
+
+   - data structures whose size has to be explicitly stated (analogy with array in C++)
+   - can hold multiple types (ex. x :: (Int, String, [Double]) is a vector with 3 dimensions)
+
+   - fst (5, 6) => 5
+   - snd (5, 6) => 6
+
+   Examples:
+   a vector with two coordinates representing a point in 2D space:
+   type Point2D = (Int, Int) -- typedef std::pair<int, int> Point2D;
+
+   Now every function that accepts a Point2D will look like this:
+
+   helper :: Point2D -> Int -- instead of (Int, Int) -> Int. Our new version has more meaning.
+   helper (x, y) = x + y -- this function sums up the coordinates. Notice the pattern matching!
+   -- helper x = fst x + snd x -- only for 2D vectors
+
+   Recap:
+      type String = [Char]
+
+Typeclasses
+
+   We can say that a function should accept numbers in general, not only Int or Double.
+
+   Example:
+
+   old:
+      helper :: Int -> Int
+
+   new:
+      helper :: (Num a, Num b) => a -> b
+
+   In most cases the compiler will help us. Will demonstrate how this works today! (tasks 2, 3 and others)
