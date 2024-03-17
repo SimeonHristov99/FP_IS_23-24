@@ -1,3 +1,11 @@
+# 🎯 Goals for week 4
+
+1. Intrduce lists.
+2. Practice writing high quality code:
+   1. Easy to read.
+   2. Safe from bugs.
+   3. Ready for change.
+
 # All tasks work with whole numbers unless stated otherwise
 
 > 🗿 **Legend**: ⭐ - Easy | 🌟 - Medium | 💫 - Hard
@@ -204,6 +212,18 @@ print $ sumDivs 161 == 192
 ```
 
 # For home
+
+### 📢 Advice
+
+The tasks have the sole purpose of helping you understand the material better and faster. Therefore:
+
+1. Avoid using external tools or help for solving the tasks.
+2. Drop us an email with your question/problem when you have difficulties.
+3. If you can't solve a task:
+   1. Spend at least 30 minutes trying out different ways to achieve what you want - maybe try to break down the task into smaller tasks and create functions that solve them.
+   2. Solving a task manually with pen and paper will help you break it down into smaller tasks.
+   3. If the above points don't help, it's best to reach out to us, skip this task and continue with the others. This would allow you to continue solving, while you're waiting for feedback from us.
+4. If you are struggling a lot with the tasks, don't hesitate to ask us for a `1-1 session` in-person or via Google Meet 😇!
 
 ## ⭐ Task 1
 

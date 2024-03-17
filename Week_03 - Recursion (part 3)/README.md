@@ -1,4 +1,14 @@
-## Task 1
+# 🎯 Goals for week 3
+
+1. Cement our understanding of the `two types of recursive processes`.
+2. Practice writing high quality code:
+   1. Easy to read.
+   2. Safe from bugs.
+   3. Ready for change.
+
+> 🗿 **Legend**: ⭐ - Easy | 🌟 - Medium | 💫 - Hard
+
+## ⭐ Task 1
 
 **Description:**
 
@@ -31,7 +41,7 @@ and 1634 (4 digits):
 1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634
 ```
 
-## Task 2
+## ⭐ Task 2
 
 **Description:**
 
@@ -56,7 +66,7 @@ print $ calculateSum 1 11 == 12
 print $ calculateSum 2 11 == 4095
 ```
 
-## Task 3
+## ⭐ Task 3
 
 **Description:**
 
@@ -75,7 +85,7 @@ print $ findMax 329450 == 9
 print $ findMax 9521 == 9
 ```
 
-## Task 4
+## 🌟 Task 4
 
 **Description:**
 
@@ -95,7 +105,7 @@ print $ sumNumbers 219 225 == 663
 print $ sumNumbers 225 219 == 663
 ```
 
-## Task 5
+## 🌟 Task 5
 
 **Description:**
 
@@ -117,7 +127,7 @@ print $ subNum 1253 5123783 == False
 print $ subNum 12 0 == False
 ```
 
-## Task 6
+## ⭐ Task 6
 
 **Description:**
 
@@ -143,7 +153,7 @@ print $ digitalRoot 132189 == 6
 print $ digitalRoot 493193 == 2
 ```
 
-## Task 7
+## 💫 Task 7
 
 **Description:**
 
@@ -166,7 +176,19 @@ print $ mySin 100 0.5 == 0.479425538604203
 
 # For home
 
-# Task 1
+### 📢 Advice
+
+The tasks have the sole purpose of helping you understand the material better and faster. Therefore:
+
+1. Avoid using external tools or help for solving the tasks.
+2. Drop us an email with your question/problem when you have difficulties.
+3. If you can't solve a task:
+   1. Spend at least 30 minutes trying out different ways to achieve what you want - maybe try to break down the task into smaller tasks and create functions that solve them.
+   2. Solving a task manually with pen and paper will help you break it down into smaller tasks.
+   3. If the above points don't help, it's best to reach out to us, skip this task and continue with the others. This would allow you to continue solving, while you're waiting for feedback from us.
+4. If you are struggling a lot with the tasks, don't hesitate to ask us for a `1-1 session` in-person or via Google Meet 😇!
+
+### 🌟 Task 1
 
 **Description:**
 
@@ -191,7 +213,7 @@ print $ removeFirstOccurrence 1212 2 == 121
 print $ removeFirstOccurrence (removeFirstOccurrence 1212 1) 1 == 22
 ```
 
-# Task 2
+### ⭐ Task 2
 
 **Description:**
 
@@ -220,7 +242,7 @@ print $ sortN 329450 == 954320
 print $ sortN 9125 == 9521
 ```
 
-# Task 3
+### 💫 Task 3
 
 **Description:**
 
@@ -246,7 +268,7 @@ print $ calcSeriesSum 1 6 == -1.0762718762718764
 print $ calcSeriesSum 10 34 == -0.10607741100173662
 ```
 
-# Task 4
+### ⭐ Task 4
 
 **Description:**
 
@@ -266,7 +288,7 @@ print $ sumDivisibleNumbers 0 100 5 == 990
 print $ sumDivisibleNumbers 100 0 5 == 990
 ```
 
-# Task 5
+### 🌟 Task 5
 
 **Description:**
 
