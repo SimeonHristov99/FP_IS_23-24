@@ -152,8 +152,8 @@ Type Inference - The Declaration Can Be Skipped
 # Week_04 - Lists. Higher Order Functions
 ###################################################################################################
 
-[ ] Test 1: 06.04 (Saturday)
-[ ] Test 2: 02.06 (Sunday)
+[X] Test 1: 06.04 (Saturday)
+[X] Test 2: 02.06 (Sunday)
 
 
 General
