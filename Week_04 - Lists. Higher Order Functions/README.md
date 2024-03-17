@@ -1,6 +1,6 @@
 # 🎯 Goals for week 4
 
-1. Intrduce lists.
+1. Introduce lists.
 2. Practice writing high quality code:
    1. Easy to read.
    2. Safe from bugs.
