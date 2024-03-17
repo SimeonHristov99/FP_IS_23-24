@@ -243,6 +243,7 @@ print $ calcSeriesSum 1 3 == -1.047619047619048
 print $ calcSeriesSum 1 4 == -1.0814814814814817
 print $ calcSeriesSum 1 5 == -1.0753246753246755
 print $ calcSeriesSum 1 6 == -1.0762718762718764
+print $ calcSeriesSum 10 34 == -0.10607741100173662
 ```
 
 # Task 4
