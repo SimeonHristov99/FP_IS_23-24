@@ -1,7 +1,8 @@
 {-
-Define a function that takes two parameters `k` and `l` and returns
-the tuple `(x, y)` where `x` is the whole part of the division
-between `k` and `l` and `y` is the remainder of the division.
+Define a function that takes two parameters `k` and `l`
+and returns the tuple `(x, y)`
+where `x` is the whole part of the division between `k` and `l`
+and `y` is the remainder of the division.
 
 **Acceptance criteria:**
 
@@ -21,5 +22,13 @@ main = do
     print $ dividePM (5, 10) == (0, 5) -- 5 / 10 = 0 and 5 % 10 = 5
 
     -- lambda test case
+    print $ (\ (k, l) -> (div k l, mod k l)) (10, 5) == (2, 0)
+    print $ (\ (k, l) -> (div k l, mod k l)) (5, 10) == (0, 5)
 
+dividePM :: Point -> Point
+dividePM (k, l) = (div k l, mod k l)
 
+divideNonPM :: Point -> Point
+divideNonPM point = (div (fst point) (snd point), mod (fst point) (snd point))
+
+type Point = (Int, Int)

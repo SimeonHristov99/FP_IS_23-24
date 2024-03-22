@@ -1,5 +1,7 @@
 {-
-Define a function that accepts a unary function `f` and a number `y` and returns a unary function that for every `x` returns:
+Define a function that accepts a unary function `f`
+and a number `y`
+and returns a unary function that for every `x` returns:
 
 - `y`, if it is greater than or equal to the result of applying `f` to `x`;
 - the result of applying `f` to `x`, otherwise.
@@ -23,6 +25,9 @@ If g is upperBound (\x -> x) 1.001
 
 main :: IO()
 main = do
-    
+    print $ (upperBound (*2) 100) 50 == 100
+    print $ (upperBound (*2) 100.236) 500.002 == 1000.004
+    print $ (upperBound (\x -> x) 1.001) 1.001 == 1.001
 
-
+upperBound :: (Double -> Double) -> Double -> (Double -> Double)
+upperBound f y = (\ x -> max y (f x))

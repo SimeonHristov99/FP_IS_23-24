@@ -305,21 +305,21 @@ Lambda Expressions
       - (\ <parameters> -> <function application>)
 
    - a lambda that adds 5 to a number:
-   ???
+   (\ n -> n + 5)
 
    - a lambda-predicate that checks whether a number is greater than 10:
-   ???
+   (\ n -> n > 10)
 
    - a lambda which adds three numbers:
-   ???
+   (\ n m x -> n + m + x)
 
    - What is an unary function?
-      ???
+      Function that accepts one argument.
    - What is a binary function?
-      ???
+      Function that accepts two arguments.
    - Can you give examples?
-      unary : ???
-      binary: ???
+      unary : not, null, even
+      binary: mod, max, +, -
    
    - Remember: The evaluation happens from LEFT TO RIGHT.
 
@@ -354,7 +354,8 @@ Tuples (Vectors) (Ordered pairs)
 
 Typeclasses
 
-   We can say that a function should accept numbers in general, not only Int or Double.
+   We can say that a function should accept numbers in general,
+   not only Int or Double.
 
    Example:
 

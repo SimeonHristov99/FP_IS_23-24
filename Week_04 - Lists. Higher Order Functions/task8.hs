@@ -28,9 +28,15 @@ main = do
     print $ isPrime 11 == True
     print $ isPrime 13 == True
 
-    -- print $ sumDig 142500 == 12
+    print $ sumDig 142500 == 12
 
-    -- print $ sumDivs 161 == 192
+    print $ sumDivs 161 == 192
+
+sumDivs :: Int -> Int
+sumDivs n = sum $ filter (\ d -> mod n d == 0) [1 .. n]
+
+sumDig :: Int -> Int
+sumDig = sum . map digitToInt . show
 
 rev :: Int -> Int
 rev = read . reverse . show
