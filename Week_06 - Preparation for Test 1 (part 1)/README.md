@@ -221,6 +221,13 @@ print $ areEqual (2, 6) (5, 15) == True
 
 б) Дефинирайте функция `averageBalanceOfCities :: ([Account],[Person]) -> [String] -> Double`, която получава база от данни и списък от населени места и връща като резултат средния баланс по сметките на хората с местоживеене в някое от изброените в списъка населени места.
 
+**Acceptance criteria:**
+
+1. Add one new test case. Place a comment after it with the words `my test`.
+2. All tests pass.
+
+**Test cases:**
+
 Sample database:
 
 ```haskell
@@ -230,13 +237,6 @@ people1 = [(1, "Ivan", "Sofia"),(2, "Georgi", "Burgas"), (3, "Petar", "Plovdiv")
 accounts1 :: [Account]
 accounts1 = [(1, 1, 12.5),(2, 1, 123.2),(3, 2, 13.0),(4, 2, 50.2),(5, 2, 17.2),(6, 3, 18.3),(7, 4, 19.4)]
 ```
-
-**Acceptance criteria:**
-
-1. Add one new test case. Place a comment after it with the words `my test`.
-2. All tests pass.
-
-**Test cases:**
 
 ```haskell
 print $ getAverageBalance (accounts1, people1) (\(_,_,city) -> city == "Burgas") == 24.95
