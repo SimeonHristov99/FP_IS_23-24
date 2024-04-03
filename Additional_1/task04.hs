@@ -10,4 +10,15 @@ main = do
     print $ prefixToSuffix [0, 0, 0, 0, 0, 0, 0, 0, 0, 1] == [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     print $ prefixToSuffix [0, 0, 0, 0, 0, 0, 1, 1, 1, 1] == [1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
 
+prefixToSuffix :: [Int] -> [Int]
+prefixToSuffix [] = []
+prefixToSuffix (x:xs) = suffixSum $ x : getA (x:xs)
 
+suffixSum :: [Int] -> [Int]
+suffixSum [] = []
+suffixSum (x:xs) = sum (x:xs) : suffixSum xs
+
+getA :: [Int] -> [Int]
+getA [] = []
+getA [x] = []
+getA (x:y:xs) = (y - x) : getA (y:xs) 

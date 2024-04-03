@@ -3,10 +3,11 @@
 -- които са от вида 4k+1 (k е цяло число) и в
 -- десетичния запис на които се съдържа цифрата 6.
 
--- > **Implementation detail**: Solve the task with one line of code.
-
 main :: IO()
 main = do
     print $ specialSum 1 100 == 195 -- 61, 65, 69
+
+specialSum :: Int -> Int -> Int
+specialSum x y = sum [d | d <- [x .. y], mod (d - 1) 4 == 0 && elem '6' (show d)]
 
 

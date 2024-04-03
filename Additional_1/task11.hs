@@ -11,4 +11,14 @@ main = do
     print $ reverseOrdSuff 32666 == 6
     print $ reverseOrdSuff 53 -- == 6
 
+-- result=3 leftover=3756
+-- 3 < 6 => 
 
+reverseOrdSuff :: Int -> Int
+reverseOrdSuff n
+ | n < 10 = n
+ | otherwise = helper (mod n 10) (div n 10)
+  where
+    helper result leftover
+     | mod leftover 10 > mod result 10 = helper (result * 10 + mod leftover 10) (div leftover 10)
+     | otherwise = result

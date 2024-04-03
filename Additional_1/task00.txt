@@ -2,7 +2,7 @@
 се решава с помощта на тази функция.
     Definition (you should not write it on the exam; I'm putting it here for the sake of completeness)
         Topic: 2
-        Slides: ???
+        Slides: 43
 
     Example:
     in task0.hs fibIter
@@ -10,13 +10,13 @@
 2. Опишете общия вид на дефиниция на функция с условия (guards) в езика Haskell и процеса на оценяване на
 обръщение към такава функция.
     Topic: 2
-    Slides: ???
-    Examples: ???
+    Slides: 24
+    Examples: 25, 27
 
 3. Как се конструира списък чрез техниката на определяне на неговия обхват (list comprehension) в езика Haskell?
 Обяснете общия случай и дайте поне два примера (в т.ч. посочете оценките на изразите от Вашите примери).
     Topic: 2
-    Slides: ???
+    Slides: 56
 
 4. Кои от следните конструкции са коректно дефинирани (валидни) списъци в Haskell? Посочете типовете на
 валидните списъци, а за останалите обяснете защо не са валидни.
@@ -27,39 +27,60 @@
     (г) [[”123”,”Hello”],[”1245”,”Hello”,”World”]]
 
     Answer(s):
-        a <= ???
-        б <= ???
-        в <= ???
-        г <= ???
+        a <= не е валидно. Причина: списъкът е хомогенна структура
+        б <= Num a => [[[a]]]
+        в <= не е валидно. Причина: списъкът е хомогенна структура
+        г <= [[String]]
 
 5. Дайте пример за дефиниция на функция на Haskell, в която се използва обща (а не примитивна) рекурсия върху списъци.
 Обяснете каква задача се решава с помощта на тази функция.
     Topic: 5
-    Primitive: ???
-    General: ???
+    Primitive: 16
+    General: 29, 30, 32, 33
 
     Primitive:
-        ???
+        Only one list
+        AND The base is the empty list
+        AND The recursive call works with the tail of the list.
 
     General:
-        ???
+        Many two lists
+        OR The base does not depend on the list(s)
+        OR There is more than one call to the function.
 
 6. Обяснете действието на функцията foldr в езика Haskell. Дайте поне два примера.
     Topic: 7
-    Slides: ???
+    Slides: [25 .. 30]
+
+foldr (*) 0 [1, 2, 3] => 0
+foldr (+) 0 [1, 2, 3]
+    acc=0 x=3 => ??? + ??? => 1 + (2 + (3 + 0))
+foldl (+) 0 [1, 2, 3]
+    acc=0 x=1 => ((0 + 1) + 2) + 3
+foldr1 (+) [1, 2, 3]
+    acc=x=3 y=2 => 1 + (2 + 3)
+foldl1 (+) [1, 2, 3]
+    acc=x=1 y=2 => (1 + 2) + 3
 
 7. Обяснете понятието "оператор" в езика Haskell. Какви свойства имат операторите? Дайте пример за дефиниция на
 оператор, придружена от спецификация на неговите свойства.
     Topic: 3
     Slides:
-        Definition: ???
-        Properties: ???
-    Example: ???
+        Definition: 2
+        Properties: 3, 5
+    Example: 10
 
 8. Обяснете понятието „образец“ (pattern) в Haskell. Дайте примери за поне три типа образци и формулирайте
 правилата за успешното им съпоставяне със съответните аргументи.
-    Topic: ???
-    Slides: ???
+    Topic: 5
+    Slides: 5
 
     Examples:
-        ???
+        Literal     : True, 1, False, "Hello"
+        Variable    : x, y z, number
+        Wildcard    : _
+        Tuple       : (x, y, z)
+        Constructor1 : []
+        Constructor2 : (x:xs)
+        Constructor3 : [x]
+        Constructor4 : [x, y]

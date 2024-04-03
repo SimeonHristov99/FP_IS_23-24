@@ -1,10 +1,9 @@
 # Plan of Attack
 
-- [ ] Show `notes.txt`.
-- [ ] Show `prep1_haskell_tasks.txt`.
-- [ ] Solve the tasks given two years ago - will be done in the next practice session - Friday with Simo.
-- [ ] Solve the tasks given last year (`K1_FP IS_2223.pdf`).
-- [ ] Solve the remaining tasks in groups of `3` students.
+- [X] Show `notes.txt`.
+- [X] Show `prep1_haskell_tasks.txt`.
+- [X] Solve the tasks given two years ago - will be done in the next practice session - Friday with Simo.
+- [X] Solve the tasks given last year (`K1_FP IS_2223.pdf`).
 
 ## Task 0
 
