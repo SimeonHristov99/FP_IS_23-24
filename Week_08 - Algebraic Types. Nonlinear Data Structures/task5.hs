@@ -1,5 +1,6 @@
 {-
-By using the `Shape` data type, define the following functions:
+By using the `Shape` data type,
+define the following functions:
 
 1. isRound - returns whether a shape has a round side;
 2. is2D - returns whether a shape has two dimensions.
@@ -23,4 +24,15 @@ main = do
     print $ is2D (Triangle 5.3 3.9 4.89) == True
     print $ is2D (Cylinder 20 30) == False
 
+is2D :: Shape a -> Bool
+is2D (Cylinder _ _) = False
+is2D _ = True
+
+isRound :: Shape a -> Bool
+isRound (Circle _) = True
+isRound (Cylinder _ _) = True
+isRound _ = False
+
+data Shape a = Circle a | Rectangle a a | Triangle a a a | Cylinder a a
+ deriving (Show, Eq, Read, Ord)
 
