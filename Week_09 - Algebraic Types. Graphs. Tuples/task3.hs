@@ -22,7 +22,9 @@ main :: IO()
 main = do
     print $ getSunk database == [("Guadalcanal",["Kirishima"]),("North Atlantic",["Bismarck","Hood"]),("North Cape",["Schamhorst"]),("Surigao Strait",["Fuso","Yamashiro"])]
 
-
+getSunk :: Database -> [(Name, [Name])]
+getSunk (outcomes,battles,_) = [(name, [shipN | (Outcome shipN cName result) <- outcomes, name == cName && result == "sunk"]) 
+                                | (Battle name _) <- battles]
 
 type Name = String
 type Date = String
