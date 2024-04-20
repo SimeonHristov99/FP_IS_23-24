@@ -9,7 +9,7 @@
 
 > 🗿 **Legend**: ⭐ - Easy | 🌟 - Medium | 💫 - Hard
 
-## Task 1
+## ⭐ Task 1
 
 **Description:**
 
@@ -20,7 +20,7 @@ Define a new **polymorphic** algrebraic data type called `Point`. A point may ha
 1. `Point` is a `new` data type in Haskell.
 2. Appropriate tests are added.
 
-## Task 2
+## 💫 Task 2
 
 **Description:**
 
@@ -42,7 +42,7 @@ print $ findJudge 3 [(1, 2), (2, 3)] == -1
 print $ findJudge 4 [(1, 3), (1, 4), (2, 3), (2, 4), (4, 3)] == 3
 ```
 
-## Task 3
+## 🌟 Task 3
 
 **Description:**
 
@@ -83,7 +83,7 @@ Here is what the full database looks like:
 print $ getSunk database == [("Guadalcanal",["Kirishima"]),("North Atlantic",["Bismarck","Hood"]),("North Cape",["Schamhorst"]),("Surigao Strait",["Yamashiro","Fuso"])]
 ```
 
-## Task 4
+## 🌟 Task 4
 
 **Description:**
 
@@ -144,7 +144,19 @@ print $ getPresident "USA Entertainm." db == "Stephen Spielberg"
 
 # For home
 
-### Task 1
+### 📢 Advice
+
+The tasks have the sole purpose of helping you understand the material better and faster. Therefore:
+
+1. Avoid using external tools or help for solving the tasks.
+2. Drop us an email with your question/problem when you have difficulties.
+3. If you can't solve a task:
+   1. Spend at least 30 minutes trying out different ways to achieve what you want - maybe try to break down the task into smaller tasks and create functions that solve them.
+   2. Solving a task manually with pen and paper will help you break it down into smaller tasks.
+   3. If the above points don't help, it's best to reach out to us, skip this task and continue with the others. This would allow you to continue solving, while you're waiting for feedback from us.
+4. If you are struggling a lot with the tasks, don't hesitate to ask us for a `1-1 session` in-person or via Google Meet 😇!
+
+### 🌟 Task 1
 
 **Description:**
 
@@ -164,7 +176,7 @@ print $ (sumExpr (2+) [0, 1, 2, 3]) 2 == 80
 print $ (sumExpr (*0.8) [0, 1, 2, 3, 4, 5]) 10 == 4345680.0
 ```
 
-### Task 2
+### 💫 Task 2
 
 **Description:**
 
@@ -195,7 +207,7 @@ print $ coldestCapital [(Country "Bulgaria" "Sofia" [(City "Varna" 0 16), (City 
 print $ coldestCapital [(Country "Bulgaria" "Sofia" [(City "Varna" 0 (-16)), (City "Plovdiv" 120 34), (City "Sofia" 420 13)]), (Country "Germany" "Berlin" [(City "Munchen" 200 (-15)), (City "Berlin" 150 12), (City "Ulm" 210 15)]), (Country "France" "Paris" [(City "Paris" 180 15), (City "Nice" 0 14), (City "Lyon" 500 13)])] == "Germany"
 ```
 
-### Task 3
+### 💫 Task 3
 
 **Description:**
 
@@ -217,7 +229,7 @@ print $ getClosestDistance [(ThreeD 4 5 6), (ThreeD 2 5 10), (ThreeD 5 2 (-10)),
 print $ getClosestDistance [(TwoD 4 6), (TwoD 5 10), (TwoD 5 29), (TwoD 1 45), (TwoD 0 2), (TwoD 69 42)] == (4.123105625617661,TwoD 4.0 6.0,TwoD 5.0 10.0)
 ```
 
-### Task 4
+### 💫 Task 4
 
 **Description:**
 
