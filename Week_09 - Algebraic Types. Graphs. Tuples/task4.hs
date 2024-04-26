@@ -1,48 +1,24 @@
-{-
-Алгебричният тип `Movie` представя данните за даден филм
-- неговото име, годината му на излизане,
-продължителността му, името на студиото, което
-го e създало и номерът на продуцента. Алгебричният тип
-`MovieStar` представя данните за даден актьор -
-неговото име и пол. Алгебричният тип `StarsIn` свързва
-име на актьор с филм, в който той участва. Алгебричният
-тип `Studio` представя данните за дадено студио -
-неговото име и номера на неговия президент (който е
-и продуцент). Алгебричният тип `MovieExec` представя
-данните за даден продуцент - неговото име, номер и нетна
-стойност на активите. Стойностите от тип `MovieDB` са
-вектори с пет елемента - списъци, които представят базата
-от данни. Петте списъка съдържат съответно всички налични
-данни за филми, актьори, участия на актьори във филми,
-студиа и продуценти.
-
-Напишете следните функции:
-
-- функция, която получава като аргументи име на студио,
-година и база от данни за филми и извежда имената на
-актьорите, участвали във филми, продуцирани от зададеното
-студио през зададената година;
-
-- функция, която по име на студио и база от данни за
-филми извежда името на президента на зададеното студио.
--}
-
 main :: IO()
 main = do
     print $ getFeaturedStars "MGM" 1995 db == ["Jack Nicholson", "Sandra Bulloc"]
     print $ getFeaturedStars "USA Entertainm." 2001 db == ["Billy Bob Thornton", "Scarlett Johansson", "Orlando Bloom", "Cate Blanchett", "Liv Tyler"]
 
-    print $ getPresident "Paramount" db -- == "Calvin Coolidge"
-    print $ getPresident "Fox" db -- == "Ted Turner"
-    print $ getPresident "USA Entertainm." db -- == "Stephen Spielberg"
+    print $ getPresident "Paramount" db == "Calvin Coolidge"
+    print $ getPresident "Fox" db == "Ted Turner"
+    print $ getPresident "USA Entertainm." db == "Stephen Spielberg"
 
 getPresident :: Name -> MovieDB -> Name
-getPresident studioName (movies, _, _, _, mes) = concat [[nameProd | (MovieExec nameProd number _) <- mes, number == preNumber] | (Movie _ _ _ cStudio preNumber) <- movies, cStudio == studioName]
+getPresident studioName (_, _, _, ss, mes) = getName getPresidentId
+ where
+    getName presId = head [name | (MovieExec name presidentId _) <- mes, presidentId == presId]
+    getPresidentId = head [presId | (Studio name presId) <- ss, name == studioName]
 
 getFeaturedStars :: Name -> Year -> MovieDB -> [Name]
-getFeaturedStars studio year (movies, _, starsIn, _, _) = concat [ [actorName | (StarsIn actorName movieTitle) <- starsIn, title == movieTitle] |
-    (Movie title cYear _ cStudio _) <- movies,
-    studio == cStudio && year == cYear]
+getFeaturedStars targetStudio targetYear (ms, _, si, _, _) = concatMap (\ movie -> getStars movie) getMoviesFromStudioYear
+ where
+    getStars movieName = [actor | (StarsIn actor title) <- si, title == movieName]
+    getMoviesFromStudioYear = [title | (Movie title year _ studio _) <- ms, year == targetYear && studio == targetStudio]
+
 
 type Name = String
 type Title = String
