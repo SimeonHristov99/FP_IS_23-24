@@ -1,3 +1,5 @@
+-- Define a function that checks whether a word is present in a binary tree made up of unique characters.
+
 main :: IO()
 main = do
     print $ containsWord t1 "acd" == True

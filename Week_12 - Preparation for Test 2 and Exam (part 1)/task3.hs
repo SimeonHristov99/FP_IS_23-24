@@ -1,3 +1,11 @@
+{-
+Define a function that returns all words
+contained in all of the trees passed as a list.
+
+**Acceptance criteria:**
+1. The task is solved using folding.
+-}
+
 main :: IO()
 main = do
     print $ allContain [] == []

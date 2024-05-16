@@ -1,3 +1,7 @@
+-- Define a function that returns all possible word combinations from a
+-- binary tree made up of characters.
+-- The order of the words in the result does not matter.
+
 main :: IO()
 main = do
     print $ genWords t1 == ["abe","acd","acf","be","cd","cf","d","e","f"]
