@@ -1,3 +1,6 @@
+-- Important!
+-- Next hour: 22.05, 320, 6 pm.
+
 -- Define a function that checks whether a word is present in a binary tree made up of unique characters.
 
 main :: IO()
