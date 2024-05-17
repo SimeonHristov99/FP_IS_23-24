@@ -1,9 +1,10 @@
 -- Organizational updates:
 -- Next hour: 22.05, 320, 6 pm.
 -- 22.05 -> Split in groups of 3-4. Solve exam 2 from 2023.
--- 31.05 -> Split in groups of 3-4. Solve exam 2 from 2022.
+-- 31.05 -> Split in groups of 3-4. Solve final from 2022.
 
--- Define a function that checks whether a word is present in a binary tree made up of unique characters.
+-- Define a function that checks whether a word is present in a
+-- binary tree made up of unique characters.
 
 main :: IO()
 main = do
@@ -20,7 +21,31 @@ main = do
     print $ containsWord t3 "bdi" == True
     print $ containsWord t3 "ac" == False
 
+getLevel :: BTree a -> Int -> [a]
+getLevel Nil _ = []
+getLevel (Node value _ _) 0 = [value]
+getLevel (Node _ left right) k = getLevel left (k - 1) ++ getLevel right (k - 1)
 
+containsWord :: BTree Char -> String -> Bool
+containsWord Nil _ = False
+containsWord _ [] = False
+containsWord (Node value Nil Nil) [w] = value == w
+containsWord t@(Node value left right) word@(w:ws)
+ | not (null ws) && value == w && elem (head ws) (getLevel t 1) = containsWord left ws || containsWord right ws
+ | otherwise = containsWord left word || containsWord right word
+
+-- Simo's alternative
+-- containsWord :: BTree Char -> String -> Bool
+-- containsWord Nil _ = False
+-- containsWord _ [] = False
+-- containsWord (Node value Nil Nil) [w] = value == w
+-- containsWord t@(Node value left right) word@(w:ws)
+--  | value == w = helper t word
+--  | otherwise = containsWord left word || containsWord right word
+--  where
+--     helper (Node value Nil Nil) [w] = value == w
+--     helper (Node value left right) (w:ws) = value == w && (helper left ws || helper right ws)
+--     helper _ _ = False
 
 data BTree a = Nil | Node a (BTree a) (BTree a)
 
