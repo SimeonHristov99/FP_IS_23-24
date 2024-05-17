@@ -1,5 +1,7 @@
 -- Important!
 -- Next hour: 22.05, 320, 6 pm.
+-- 22.05 -> Split in groups of 3-4. Solve exam 2 from 2023.
+-- 31.05 -> Split in groups of 3-4. Solve exam 2 from 2022.
 
 -- Define a function that checks whether a word is present in a binary tree made up of unique characters.
 
