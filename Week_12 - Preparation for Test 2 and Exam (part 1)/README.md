@@ -206,13 +206,10 @@ print $ cone numberBTree == True
 
 **Description:**
 
+![Alt_text](assets/pic2.png "p2")
+![Alt_text](assets/pic1.png "p1")
 
 **Acceptance criteria:**
 
 1. Add one new test case. Place a comment after it with the words `my test`.
 2. All tests pass.
-
-**Test cases:**
-
-![Alt_text](assets/pic2.png "p2")
-![Alt_text](assets/pic1.png "p1")
