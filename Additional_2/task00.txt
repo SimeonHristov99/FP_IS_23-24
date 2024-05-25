@@ -1,0 +1,77 @@
+1. Обяснете понятието „дефиниране на функция на функционално ниво“.
+Дайте пример за дефиниция на функция на функционално ниво.
+    Topic 8
+    Slides: ???
+    Examples: ???, slide ???
+
+
+2. Характеризирайте накратко структурата от данни „опашка“.
+    Topic 9
+    Slides: ???
+
+
+3. Опишете накратко стратегията за търсене на път в 
+граф в дълбочина (depth-first search).
+    Topic 10
+    Slides: ??? (??? is for you to visualize how DFS works)
+
+    Look at `graph.png`. Answer the questions,
+        then perform DFS and BFS from S to either G1, G2, G3.
+        See answers in "dfs_bfs.pdf" file.
+
+    What is a node? 
+    What is an edge? 
+    What is an arc? 
+    What is a graph? 
+    What is a tree? 
+    What is a leaf? 
+    What is a parent? 
+    What is a root? 
+    The non-recursive DFS is implemented using [ stack | queue ]? 
+    The non-recursive BFS is implemented using [ stack | queue ]? 
+
+    DFS Answer: ???
+    BFS Answer: ???
+
+
+4. Обяснете понятието „алгебричен тип“ в езика Haskell.
+Дайте два примера за дефиниции на различни видове алгебрични типове.
+    Topic 11
+    Slides: ???
+    Examples: ???
+
+
+5. Дайте пример за дефиниция на алгебричен тип
+като производен екземпляр на множество класове.
+Обяснете накратко значението на тази дефиниция.
+    Topic ???
+    Slides: ???
+        - explanations for Eq, Show, Ord, Read: look at task0.hs
+
+
+6. Обяснете понятието „полиморфна функция“.
+Дайте два примера за полиморфни функции в езика Haskell.
+    Topic ???
+    Slides: ???
+        - examples: ???
+    What about generic functions?
+        - example1: write a function in task0.hs that has Eq, Ord as constraints
+        - example2 (two built-in functions): ???
+
+
+7. Как се дефинират класове в Haskell? Дайте пример за дефиниция на клас.
+    - WRONG: колекция от типове, за които се поддържа
+                множество додефинирани операции, наречени методи.
+    Topic ???
+    Slides: ???
+    Example: ???
+
+
+8. Обяснете същността на „мързеливото“ оценяване (lazy evaluation).
+Дайте поне два примера,
+които илюстрират различни аспекти на „мързеливото“ оценяване.
+    Topic ???
+    Slides: ???
+        - example1: ???, slides ???
+        - example2: slides ???
+        - example3: look at example in task0.hs (evaluate when needed)
