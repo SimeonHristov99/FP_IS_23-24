@@ -37,7 +37,9 @@
 4. Обяснете понятието „алгебричен тип“ в езика Haskell.
 Дайте два примера за дефиниции на различни видове алгебрични типове.
     Topic 11
-    Slides: ???
+    Slides: there are no slides that say exactly what should be written here.
+        It is discussed on lectures and practice sessions.
+        So how did we define algebraic types in class?
     Examples: ???
 
 
