@@ -2,7 +2,7 @@
 
 1. Solve `Theory.pdf`.
 2. Solve `IS_June_2023.pdf`.
-3. (optional if time till 9 pm) Solve tasks uploaded in Moodle for preparation for exam 2.
+3. (optionalal if time till 9 pm) Solve tasks uploaded in Moodle for preparation for exam 2.
 
 # Task 0
 
