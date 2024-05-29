@@ -10,4 +10,6 @@ type Elevation = Int
 data City = City Name Elevation AvgYearlyTemperature
 data Country = Country Name Capital [City]
 
-
+highestCapital cs = fst $ foldl1 (\ c1@(n1, h1) c2@(n2, h2) -> if h1 > h2 then c1 else c2) toHeight
+ where
+    toHeight = [(name, el) | (Country name nameCap cities) <- cs, (City nameCity el _) <- cities, nameCity == nameCap]
