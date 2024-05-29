@@ -1,37 +1,37 @@
 1. Обяснете понятието „дефиниране на функция на функционално ниво“.
 Дайте пример за дефиниция на функция на функционално ниво.
     Topic 8
-    Slides: ???
-    Examples: ???, slide ???
+    Slides: 2
+    Examples: onFuncLevel, slide 3
 
 
 2. Характеризирайте накратко структурата от данни „опашка“.
     Topic 9
-    Slides: ???
+    Slides: 18, 19
 
 
 3. Опишете накратко стратегията за търсене на път в 
 граф в дълбочина (depth-first search).
     Topic 10
-    Slides: ??? (??? is for you to visualize how DFS works)
+    Slides: 22 (23 is for you to visualize how DFS works)
 
     Look at `graph.png`. Answer the questions,
         then perform DFS and BFS from S to either G1, G2, G3.
         See answers in "dfs_bfs.pdf" file.
 
-    What is a node? 
-    What is an edge? 
-    What is an arc? 
-    What is a graph? 
+    What is a node? A circle with an element.
+    What is an edge? Connection without direction between two nodes.
+    What is an arc? Connection with direction between two nodes.
+    What is a graph? A set of nodes and edges/arc.
     What is a tree? 
     What is a leaf? 
     What is a parent? 
     What is a root? 
-    The non-recursive DFS is implemented using [ stack | queue ]? 
-    The non-recursive BFS is implemented using [ stack | queue ]? 
+    The non-recursive DFS is implemented using [ stack | queue ]? stack
+    The non-recursive BFS is implemented using [ stack | queue ]? queue
 
-    DFS Answer: ???
-    BFS Answer: ???
+    DFS Answer: [S A B C F D E G3]
+    BFS Answer: [S A G1]
 
 
 4. Обяснете понятието „алгебричен тип“ в езика Haskell.
@@ -40,40 +40,43 @@
     Slides: there are no slides that say exactly what should be written here.
         It is discussed on lectures and practice sessions.
         So how did we define algebraic types in class?
-    Examples: ???
+        Algebraic data types are new types in Haskell.
+    Examples: 2, 6, 10
 
 
 5. Дайте пример за дефиниция на алгебричен тип
 като производен екземпляр на множество класове.
 Обяснете накратко значението на тази дефиниция.
-    Topic ???
-    Slides: ???
-        - explanations for Eq, Show, Ord, Read: look at task0.hs
+    Topic 11
+    Slides: 20
+        - explanations for Eq, Show, Ord, Read: look at task00.hs
 
 
 6. Обяснете понятието „полиморфна функция“.
 Дайте два примера за полиморфни функции в езика Haskell.
-    Topic ???
-    Slides: ???
-        - examples: ???
+    Topic 12
+    Slides: 2
+        Полиморфна функция е тази функция, която работи за всеки възможен тип, който се приема.
+        - example1: id
+        - example2: head, last, init
     What about generic functions?
-        - example1: write a function in task0.hs that has Eq, Ord as constraints
-        - example2 (two built-in functions): ???
+        - example1: write a function in task00.hs that has Eq, Ord as constraints
+        - example2 (two built-in functions): length, foldl, (+)
 
 
 7. Как се дефинират класове в Haskell? Дайте пример за дефиниция на клас.
     - WRONG: колекция от типове, за които се поддържа
                 множество додефинирани операции, наречени методи.
-    Topic ???
-    Slides: ???
-    Example: ???
+    Topic 11
+    Slides: 10, 13
+    Example: 11
 
 
 8. Обяснете същността на „мързеливото“ оценяване (lazy evaluation).
 Дайте поне два примера,
 които илюстрират различни аспекти на „мързеливото“ оценяване.
-    Topic ???
-    Slides: ???
-        - example1: ???, slides ???
-        - example2: slides ???
-        - example3: look at example in task0.hs (evaluate when needed)
+    Topic 12
+    Slides: 2
+        - example1: take 5 [0 ..], slides 5, 6, 7
+        - example2: slides 7, 8
+        - example3: look at example in task00.hs (evaluate when needed)

@@ -22,4 +22,18 @@ main = do
     print $ controller "P......P..OP..P..." == "123455543233334555"
     print $ controller "..P...O....." == "001234321000"
 
+controller :: String -> String
+controller ss = helper ss 0 0 0
+ where
+    helper "" _ _ _ = ""
+    helper ('O':ls) previous direction direction_prev = show (previous - direction) ++ helper ls (previous - direction) (-direction) direction
+    helper ('P':ls) 0 _ _ = "1" ++ helper ls 1 1 0
+    helper ('P':ls) 5 _ _ = "4" ++ helper ls 4 (-1) 0
+    helper ('P':ls) previous 0 direction_prev = show (previous + direction_prev) ++ helper ls (previous + direction_prev) direction_prev 0
+    helper ('P':ls) previous direction direction_prev = show previous ++ helper ls previous 0 direction
+    helper (_:ls) previous direction direction_prev
+     | previous == 0 || previous == 5 = show previous ++ helper ls previous 0 direction
+     | otherwise = show (previous + direction) ++ helper ls (previous + direction) direction direction_prev
 
+-- P.... .   .....
+-- 12345 5
