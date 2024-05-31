@@ -12,10 +12,21 @@ main = do
             (Node 0 Empty
             (Node 1 Empty Empty))
 
+data BTree = Empty | Node Int BTree BTree deriving (Eq, Show)
 
+notContains :: BTree -> Int -> Bool
+notContains Empty _ = True
+notContains (Node value left right) n = value /= n && notContains left n && notContains right n
 
-data BTree = Empty | Node Int BTree BTree
- deriving (Eq, Show)
+pruneTree :: BTree -> Int -> BTree
+pruneTree Empty _ = Empty
+pruneTree t@(Node value left right) n
+ | notContains t n = Empty
+ | notContains left n && notContains right n = Node value Empty Empty
+ | notContains left n = Node value Empty (pruneTree right n)
+ | notContains right n = Node value (pruneTree left n) Empty
+ | otherwise = Node value (pruneTree left n) (pruneTree right n)
+
 
 bt0 = Node 6 Empty Empty
 bt1 = Node 1 Empty

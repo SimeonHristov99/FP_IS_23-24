@@ -6,4 +6,13 @@ main = do
 
 fn = resetMatrix [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 
+transpose :: [[Int]] -> [[Int]]
+transpose xss
+ | all null xss = []
+ | otherwise = map head xss : transpose (map tail xss)
 
+resetMatrix :: [[Int]] -> ((Int-> Bool) -> [[Int]])
+resetMatrix mat = (\ p ->
+    transpose
+        $ map (\ xs -> if any p xs then replicate (length xs) 0 else xs)
+        $ transpose mat)
